@@ -1,7 +1,8 @@
-import java.util.*;
-import java.util.stream.*;
+package practice;
 
-class Practice06 {
+import java.util.*;
+
+class NumberProvider {
     private static int[] numbers = new int[4];
 
     public static int[] createNumber() {
@@ -17,7 +18,7 @@ class Practice06 {
         }
         return numbers;
     }
-    public static boolean numberCheck(int number) {
+    private static boolean numberCheck(int number) {
         for (int i : numbers) {
             if (number == i) {
                 return false;
@@ -26,17 +27,18 @@ class Practice06 {
         return true;
     }
 }
+
 public class Practice07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] answer = Practice06.createNumber();
+        int[] answer = NumberProvider.createNumber();
 
         int i = 1;
         while(true) {
-            System.out.print(i + "âÒñ⁄: 4åÖÇÃêÆêîÇì¸óÕÇµÇƒÇ≠ÇæÇ≥Ç¢ > ");
+            System.out.print(i + "ÂõûÁõÆ: 4Ê°Å„ÅÆÊï¥Êï∞„ÇíÂÖ•Âäõ„Åó„Å¶„Åè„Å†„Åï„ÅÑ > ");
             String number = sc.nextLine();
-            String[] numbers = number.split("");
-            int[] numbers = Arrays.stream(numbers).mapToInt(x -> Integer.parseInt(x)).toArray();
+            String[] numbersStr = number.split("");
+            int[] numbers = Arrays.stream(numbersStr).mapToInt(Integer::parseInt).toArray();
 
             int hit = 0;
             int blow = 0;
@@ -51,7 +53,7 @@ public class Practice07 {
             }
             System.out.println(hit + "hit / " + blow + "blow");
             if (hit == 4) {
-                System.out.println("ê≥âÇ≈Ç∑!");
+                System.out.println("Ê≠£Ëß£!");
                 System.exit(0);
             }
         }

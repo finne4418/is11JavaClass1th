@@ -1,10 +1,12 @@
+package practice;
+
 import java.util.*;
 public class Practice09 {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("ƒ[ƒ‹ƒAƒhƒŒƒX‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢ > ");
+        System.out.print("ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ > ");
         String address = sc.nextLine();
 
         int i = 0;
@@ -19,18 +21,18 @@ public class Practice09 {
             i++;
         }
         if (mark_number != 1) {
-            System.out.println("ƒ[ƒ‹ƒAƒhƒŒƒX‚Å‚Í‚ ‚è‚Ü‚¹‚ñ");
+            System.out.println("ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã§ã¯ã‚ã‚Šã¾ã›ã‚“");
             System.exit(1);
         }
         for (i = 0; i < index; i++ ) {
             sb.append(address.charAt(i));
         }
-        System.out.println("ƒAƒJƒEƒ“ƒg–¼: " + sb.toString());
+        System.out.println("ã‚¢ã‚«ã‚¦ãƒ³ãƒˆå: " + sb.toString());
 
         sb.setLength(0);
         for (int j = index + 1; j < address.length(); j++ ) {
             sb.append(address.charAt(j));
         }
-        System.out.println("ƒhƒƒCƒ“–¼: " + sb.toString());
+        System.out.println("ãƒ‰ãƒ¡ã‚¤ãƒ³å: " + sb.toString());
     }
 }

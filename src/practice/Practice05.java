@@ -1,3 +1,5 @@
+package practice;
+
 public class Practice05 {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder("0");
@@ -5,7 +7,7 @@ public class Practice05 {
         int number2 = 1;
         int number3 = 1;
         while(number1 < 1000) {
-            sb.append("," + number1);
+            sb.append(",").append(number1);
             int sum = number1 + number2 + number3;
             number1 = number2;
             number2 = number3;

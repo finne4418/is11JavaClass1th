@@ -1,4 +1,7 @@
+package practice;
+
 import java.util.*;
+
 public class Practice06 {
     private static List<Integer> numbers = new ArrayList<>();
 
@@ -17,7 +20,7 @@ public class Practice06 {
             System.out.print(num);
         }
     }
-    public static boolean numberCheck(int number) {
+    private static boolean numberCheck(int number) {
         for (int i : numbers) {
             if (number == i) {
                 return false;
